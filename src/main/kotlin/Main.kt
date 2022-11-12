@@ -1,7 +1,4 @@
-import java.awt.Component
-import java.awt.Dimension
-import java.awt.Font
-import java.awt.Toolkit
+import java.awt.*
 import java.awt.event.KeyEvent
 import java.awt.event.KeyListener
 import javax.swing.JFrame
@@ -14,7 +11,7 @@ import kotlin.system.exitProcess
 // Maybe scale based on font
 // This is good for Monaco 20
 const val WIDTH = 120
-const val HEIGHT = 60
+const val HEIGHT = 45
 
 /**
  *
@@ -103,7 +100,7 @@ fun main(args: Array<String>) {
     //textArea.setBounds()
 
     // Don't do anything??
-    textArea.alignmentX = Component.CENTER_ALIGNMENT
+    textArea.alignmentX = 10.0F
     textArea.alignmentY = Component.CENTER_ALIGNMENT
 
 
@@ -112,6 +109,9 @@ fun main(args: Array<String>) {
     textArea.addKeyListener(JKKeyListener(frame))
     frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
     frame.size = Dimension(WIDTH, HEIGHT)
+
+    textArea.background = java.awt.Color(0, 128, 128)
+    textArea.foreground = Color.WHITE
 
     frame.isUndecorated = true
     frame.isAlwaysOnTop = true
