@@ -1,11 +1,10 @@
 import java.awt.*
 import java.awt.event.KeyEvent
 import java.awt.event.KeyListener
-import javax.swing.JFrame
-import javax.swing.JTextArea
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import javax.swing.JLabel
+import javax.swing.JFrame
+import javax.swing.JTextArea
 import kotlin.system.exitProcess
 
 // Maybe scale based on font
