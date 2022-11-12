@@ -81,41 +81,6 @@ class JKKeyListener(frame: JFrame): KeyListener {
     }
 }
 
-class testSecondThread:Runnable{
-
-    private fun createNewWindow() {
-        val jl = JLabel("THis is a new window!!!")
-
-        val frame = JFrame("Test Frame")
-        frame.add(jl)
-        frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
-        frame.size = Dimension(200, 200)
-
-        frame.isVisible = true
-    }
-
-    init {
-        val jl = JLabel("test text")
-
-        val frame = JFrame("Test Frame")
-        frame.add(jl)
-        frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
-        frame.size = Dimension(200, 200)
-
-        frame.isVisible = true
-    }
-    override fun run() {
-
-    }
-}
-
-fun testThread() {
-    val secondThread = testSecondThread()
-    val thread = Thread(secondThread)
-
-    thread.start()
-}
-
 
 fun updateClock(textArea: JTextArea, formatter: DateTimeFormatter, flag: Boolean) {
     val clockThread = ClockThread(flag, textArea, formatter)
